@@ -1,5 +1,0 @@
-.terraform
-*.tfstate
-*.tfstate.*
-terraform.auto.tfvars
-*.swp

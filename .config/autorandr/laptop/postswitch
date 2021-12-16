@@ -1,6 +1,0 @@
-#!/bin/bash
-bspc desktop dev   --to-monitor eDP1 --follow
-bspc desktop term  --to-monitor eDP1
-bspc desktop web   --to-monitor eDP1
-bspc desktop music --to-monitor eDP1
-bspc desktop coms  --to-monitor eDP1

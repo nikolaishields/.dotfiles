@@ -1,6 +1,0 @@
-#!/bin/bash
-bspc desktop dev   --to-monitor DP1-3 --follow
-bspc desktop term  --to-monitor DP1-3
-bspc desktop web   --to-monitor DP1-1 --follow
-bspc desktop music --to-monitor DP1-1
-bspc desktop coms  --to-monitor DP1-1

@@ -1,20 +1,21 @@
-SHELL := /usr/bin/env bash
-OS := $(shell uname)
+SHELL     := /usr/bin/env bash
+OS        := $(shell uname)
 SRCDIR    := $(shell realpath .)
 BUILDDIR  := $(shell realpath ..)
 UTILITIES := $(shell ls $(SRCDIR) | grep -Ev 'Makefile')
-clean:
-	@echo "preparing phase: $@"
-	@echo "SRCDIR = $(SRCDIR)"
-	for utility in $(UTILITIES); do \
-		stow -D $${utility}; \
-	done;
+STOW      := $(foreach UTILITY,$(UTILITIES), stow -t test/ -D $(UTILITY);)
 
-install: clean
-	@echo "preparing phase: $@"
-	@echo "BUILDDIR = $(BUILDDIR)"
-	for utility in $(UTILITIES); do \
-		stow $${utility}; \
-	done;
+test: 
+	mkdir test/
+	$(foreach UTILITY,$(UTILITIES), stow -t test/ $(UTILITY);)
+
+.PHONY: clean
+clean: 
+	rm -rf test/
+
+install: clean uninstall
+	$(foreach UTILITY,$(UTILITIES), stow $(UTILITY);)
 	source $(BUILDDIR)/.bashrc
 
+uninstall:
+	$(foreach UTILITY,$(UTILITIES), stow -D $(UTILITY);)

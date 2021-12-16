@@ -7,3 +7,4 @@ nnoremap <leader>pw :lua require('telescope.builtin').grep_string { search = vim
 nnoremap <leader>pb :lua require('telescope.builtin').buffers()<CR>
 nnoremap <leader>vh :lua require('telescope.builtin').help_tags()<CR>
 nnoremap <leader>vrc :lua require('nikolaishields.telescope').search_vimrc()<CR>
+nnoremap <leader>dot :lua require('nikolaishields.telescope').search_dotfiles()<CR>

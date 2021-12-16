@@ -39,4 +39,12 @@ M.search_vimrc = function()
         hidden = true,
     })
 end
+
+M.search_dotfiles = function()
+    require("telescope.builtin").find_files({
+        prompt_title = "< dotfiles >",
+        cwd = "~/.dotfiles",
+        hidden = true,
+    })
+end
 return M

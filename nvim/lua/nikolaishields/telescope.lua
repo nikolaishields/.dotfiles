@@ -21,15 +21,25 @@ require("telescope").setup({
             },
         },
     },
+    pickers = {
+      file_browser = {
+        hidden = true,
+      }
+    },
     extensions = {
         fzy_native = {
             override_generic_sorter = false,
             override_file_sorter = true,
         },
+        file_browser = {
+            theme = "ivy",
+        
+        }
     },
 })
 
 require("telescope").load_extension("fzy_native")
+require("telescope").load_extension("file_browser")
 
 local M = {}
 M.search_vimrc = function()

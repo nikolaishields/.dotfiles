@@ -2,7 +2,6 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR=vim
 
-export ZSH="/home/kolya/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(
   aws
@@ -15,7 +14,6 @@ plugins=(
   terraform docker 
   zsh-completions
 )
-source $ZSH/oh-my-zsh.sh
 
 # Keybindings
 # give us access to ^Q

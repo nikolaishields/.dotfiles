@@ -23,7 +23,6 @@ set noerrorbells
 set noswapfile
 set nowrap
 set nu
-set relativenumber
 set scrolloff=8
 set shiftwidth=4
 set shortmess+=c            " Don't pass messages to |ins-completion-menu|.
@@ -39,3 +38,4 @@ set undofile
 set updatetime=50
 set wildmode=longest,list   " get bash-like tab completions
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+"test
